@@ -33,19 +33,19 @@
 
             <Label Grid.Row="1" Text="Choose your tip" TextColor="{StaticResource LightFont}" VerticalOptions="Center"/>
             <HorizontalStackLayout Spacing="10" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="70">
-                <Button Text="10%" WidthRequest="70" />
-                <Button Text="15%" WidthRequest="70"/>
-                <Button Text="20%" WidthRequest="70"/>
+                <Button Text="10%" WidthRequest="70" Clicked="Button_OnClicked" />
+                <Button Text="15%" WidthRequest="70" Clicked="Button_OnClicked"/>
+                <Button Text="20%" WidthRequest="70" Clicked="Button_OnClicked"/>
             </HorizontalStackLayout>
 
 
             <Label x:Name="LblTip" Grid.Row="2" Text="Tip: 0%" TextColor="{StaticResource LightFont}" VerticalOptions="Center"/>
-            <Slider Grid.Row="2" Grid.Column="1" Minimum="0" Maximum="100" ValueChanged="Slider_OnValueChanged"></Slider>
+            <Slider Grid.Row="2" Grid.Column="1" Minimum="0" Maximum="100" x:Name="SldTip" ValueChanged="Slider_OnValueChanged"></Slider>
 
             <Label  Grid.Row="3" Text="Split the total" TextColor="{StaticResource LightFont}" VerticalOptions="Center"/>
             <HorizontalStackLayout Grid.Row="3" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center">
                 <Button Text="-" WidthRequest="70" x:Name="BtnMinus" Clicked="BtnMinus_OnClicked"/>
-                <Label Text="1" x:Name="TxtNoPersons" WidthRequest="100" HeightRequest="50" Margin="-5,0,-5,0" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="25" BackgroundColor="{StaticResource SectionColor}" TextColor="{StaticResource LightFont}"/>
+                <Label Text="1" x:Name="LblNoPersons" WidthRequest="100" HeightRequest="50" Margin="-5,0,-5,0" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="25" BackgroundColor="{StaticResource SectionColor}" TextColor="{StaticResource LightFont}"/>
                 <Button Text="+" WidthRequest="70" x:Name="BtnPlus" Clicked="BtnPlus_OnClicked"/>
             </HorizontalStackLayout>
         </Grid>
